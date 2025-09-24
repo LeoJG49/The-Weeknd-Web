@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Weeknd</title>
-    <link rel="icon" href="/Images/XO.ico">
+    <link rel="icon" href="/Images/OptimazedImages/XO Logo.ico.jpg">
     <link rel="stylesheet" href="/CSS/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
@@ -14,24 +14,23 @@
 <body>
     <!-- HEADER-->
     <header class="main-header">
-        <div class="main-title">
+        <!--LOGO-->
+        <div class="Logo">
+            <a href="/HTML/index.html"><img src="/Images/OptimazedImages/pngwing.com.png" alt="XO"></a>
+        </div>
+        <!--TITLE-->
+        <div class="title">
             <h1>
                 <a href="index.html"><b>THE WEEKND</b></a>
             </h1>
         </div>
-        
-        <!--LOGO-->
-        <div class="Logo">
-            <a href="/HTML/index.html"><img src="/Images/pngwing.com.png" alt="XO"></a>
-        </div>
-        
         <!-- NAVIGATION-->
-        <div class="nav1">
+        <nav class="navegador">
             <div class="items-nav"><a href="/HTML/index.html">Home</a></div>
             <div class="items-nav"><a href="/HTML/SocialMedia.html">Social</a></div>
             <div class="items-nav"><a href="/HTML/AboutUs.html">About</a></div>
             <div class="items-nav"><a href="/HTML/ContactUs.html">Contact</a></div>
-        </div>
+        </nav>
     </header>
 
     <!--INFINTE ANIMATION-->
@@ -45,12 +44,7 @@
     </div>
 
     <!--VIDEOS-->
-
-    <div class="video-container">
-        <div class="video video1"><video src="/Videos/The Weeknd – Timeless with Playboi Carti (Official Music Video) - The Weeknd (1080p, h264, youtube).mp4" title="Timeless with Playboi Carti and The Weeknd" controls="" width="100%" height="700px" poster="https://imgs.search.brave.com/B5hadFKRN68mgM1qo5J0RtwDaTNya2v9FuSsZ30m_r4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4y/LmFsYnVtb2Z0aGV5/ZWFyLm9yZy8zNzV4/L2FsYnVtLzIwMjQv/MTA4NTI5Ny10aW1l/bGVzcy0xLmpwZw"> Timeless with Playboi Carti and The Weeknd</video></div>
-        <div class="video video2"> <video src="/Videos/The Weeknd, JENNIE, Lily-Rose Depp - One Of The Girls (Official Video) - TheWeekndVEVO (1080p, h264, youtube).mp4" title="One of the Girls" controls="" width="100%" height="700px" poster="https://imgs.search.brave.com/XmQL2EysjLCRVBpKFV8upFBWKypcX4HSicy41-G54-4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9leHRl/cm5hbC1wcmV2aWV3/LnJlZGQuaXQvZnJl/c2gtdGhlLXdlZWtu/ZC1qZW5uaWUtbGls/eS1yb3NlLWRlcHAt/b25lLW9mLXRoZS1n/aXJscy12MC1odzBR/c3FYRzhuQnZ4VDUz/VFF3YTNfNFVncmo4/Tm4zVGZRYVdMU29E/LUo0LmpwZz9hdXRv/PXdlYnAmcz01ZjBm/MTY2OTNjZDFhYzJj/ZjA1OTQ1N2QzZmVi/NzkxMDZkMGY1NTYy">Lily-Rose Depp with The Weeknd</video></div>
-        <div class="video video3"><video src="/Videos/The Weeknd - Dancing In The Flames (Official Music Video) - TheWeekndVEVO (1080p, h264, youtube).mp4" title="Dancing in the Flames" controls="" width="100%" height="700px" poster="https://imgs.search.brave.com/vE25z_TOK1G70TO3LfZdFRyTw0cb4p_r23pdfOQTo3g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMucW9idXouY29t/L2ltYWdlcy9jb3Zl/cnMveGMvMWMvcm01/d3RkNDhkMWN4Y182/MDAuanBn">Dancing in the Flames (The Weeknd)</video></div>
-    </div>
+    <div id="video-section" class="videos"></div>
 
     <!--Month Viewers-->
 
@@ -63,43 +57,41 @@
         </div>
     </div>
  
-    <div class="aside-article">
-        <h2><i>Popular Songs</i></h2>
-            <aside class="extra-information" id="Other-Songs">
-                <div class="secundary-navegator">
-                    <a href="https://open.spotify.com/intl-es/track/3PsS445MHcmtroGTstfTbm" target="_blank"><p><img src="/Images/The_Weeknd_-_Coming_Down.webp" alt=""><b>Coming Down</b></p></a>
-                    <a href="https://open.spotify.com/intl-es/track/2p8IUWQDrpjuFltbdgLOag" target="_blank"><p><img src="/Images/The_Weeknd_-_After_Hours.webp" alt=""><b>After Hours</b></p></a>
-                    <a href="https://open.spotify.com/intl-es/track/09mEdoA6zrmBPgTEN5qXmN" target="_blank"><p><img src="/Images/The_Weeknd_-_Call_Out_My_Name.jpg" alt=""><b>The Hills</b></p></a>
-                </div>
-            </aside>
-    </div>
+    <section class="popular-songs">
+        <div class="section-container">
+            <h2 class="section-title"><i>Popular Songs</i></h2>
+            <div class="secundary-navegator">
+                <a href="https://open.spotify.com/intl-es/track/3PsS445MHcmtroGTstfTbm" target="_blank"><p><img src="/Images/The_Weeknd_-_Coming_Down.webp" alt=""><b>Coming Down</b></p></a>
+                <a href="https://open.spotify.com/intl-es/track/2p8IUWQDrpjuFltbdgLOag" target="_blank"><p><img src="/Images/The_Weeknd_-_After_Hours.webp" alt=""><b>After Hours</b></p></a>
+                <a href="https://open.spotify.com/intl-es/track/09mEdoA6zrmBPgTEN5qXmN" target="_blank"><p><img src="/Images/The_Weeknd_-_Call_Out_My_Name.jpg" alt=""><b>The Hills</b></p></a>
+            </div>
+        </div>
+    </section>
 
     
     <!--Footer-->
-    <div class="footer">
-        <footer id="end" class="underpage">
-                <div class="shareContact">
-                    <div class="icons twitter">
-                        <a href="https://twitter.com/theweeknd" target="_blank"><i class="fa-brands fa-x-twitter fa-xl" style="color: #ff0000;"></i></a>
-                    </div>
-                    <div class="icons youtube">
-                        <a href="https://www.youtube.com/channel/UC0WP5P-ufpRfjbNrmOWwLBQ" target="_blank"><i class="fa-brands fa-youtube fa-xl" style="color: #ff0000;"></i></a>
-                    </div>
-                    <div class="icons instagram">
-                        <a href="https://www.instagram.com/theweeknd/" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #ff0000;"></i></a>
-                    </div>
-                    <div class="icons tiktok">
-                        <a href="https://www.tiktok.com/@theweeknd" target="_blank"><i class="fa-brands fa-tiktok fa-xl" style="color: #ff0000;"></i></a>
-                    </div>
-                    <div class="icons facebook">
-                        <a href="https://www.facebook.com/theweeknd" target="_blank"><i class="fa-brands fa-facebook-f fa-xl" style="color: #ff0000;"></i></a>
-                    </div>         
-                </div>
+        <footer id="end" class="footer-section">
             <div class="Copyright" id="Copy">
-                <p>Copyright 2024<i class="fa-regular fa-registered fa-2xs"></i></p>
+                <p>Copyright 2025<i class="fa-regular fa-registered fa-2xs"></i></p>
+            </div>
+            <div class="shareContact">
+                <div class="icons twitter">
+                    <a href="https://twitter.com/theweeknd" target="_blank"><i class="fa-brands fa-x-twitter fa-xl" style="color: #ff0000;"></i></a>
+                </div>
+                <div class="icons youtube">
+                    <a href="https://www.youtube.com/channel/UC0WP5P-ufpRfjbNrmOWwLBQ" target="_blank"><i class="fa-brands fa-youtube fa-xl" style="color: #ff0000;"></i></a>
+                </div>
+                <div class="icons instagram">
+                    <a href="https://www.instagram.com/theweeknd/" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #ff0000;"></i></a>
+                </div>
+                <div class="icons tiktok">
+                    <a href="https://www.tiktok.com/@theweeknd" target="_blank"><i class="fa-brands fa-tiktok fa-xl" style="color: #ff0000;"></i></a>
+                </div>
+                <div class="icons facebook">
+                    <a href="https://www.facebook.com/theweeknd" target="_blank"><i class="fa-brands fa-facebook-f fa-xl" style="color: #ff0000;"></i></a>
+                </div>         
             </div>
         </footer>
-    </div>
-
+        <script src="/JavaScript/script.js"></script>
 </body>
 </html>
