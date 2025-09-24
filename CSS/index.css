@@ -1,91 +1,89 @@
+/*General Styles*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
     background: #000000;
-    color: #fff;
+    color: #ffffff;
     overflow-x: hidden;
-}
-
-/*HEADER*/
-
-.Logo {
-    position: absolute;
-}
-
-.Logo img {
-    width: 50px;
-    margin-left: 10px;
-}
-
-.main-title {
-    display: flex;
-    flex-direction: column; /* Coloca el título y subtítulo en columna */
-    align-items: center;    /* Centra horizontalmente */
-    justify-content: center; /* Centra verticalmente */
-    font-size: 1.5em;
-    width: 100vw; /* Ocupa todo el ancho de la pantalla */
-    position: absolute;
-    top: 0;
-    left: 0;
-    text-align: center;
-}
-
-
-.main-title  a {
-    color: rgb(255, 0, 0);
 }
 
 a {
     text-decoration: none;
-    color: #ffffff;
+    color: inherit;
 }
 
-.nav1 {
+/*HEADER*/
+.main-header {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    font-size: 1.2rem;
-    margin-top: 12px;
-}
-
-.items-nav {
-    width: 110px;
-    text-align: center;
-    justify-items: center;
-    line-height: 30px;
-    margin-bottom: 80px;
-}
-
-
-.nav1 a {
-    color: rgb(255, 0, 0);
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(25, 24, 24, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
     position: relative;
-    letter-spacing: 0.5px;
-    padding: 0 5px;
-    
 }
 
-.nav1 a:after {
-    content: "";
+.Logo {
+    transition: transform 0.8s;
+}
+
+.Logo:hover{
+    transform: scale(1.1);
+}
+
+
+.title {
     position: absolute;
-    background-color: rgb(255, 0, 0);
-    height: 3px;
-    width: 0;
-    right: 5px;
-    bottom: -10px;
-    transition: all 0.3s;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
 }
 
-.nav1 a:hover {
-    color: rgb(220, 0, 0);
+.title h1 a {
+    font-size: 1.5em;
+    color: #ff001e80;
+    text-shadow: 0 0 5px #ff001e80, 0 0 10px #ff001e80, 0 0 20px #ff001e80;
+    transition: all 0.85s;
 }
 
-.nav1 a:hover:after {
-    width: 3.2rem;
+.title :hover{
+    color: #dc0000;
+    text-shadow: 0 0 10px #dc0000, 0 0 20px #dc0000, 0 0 30px #dc0000;
+    cursor: pointer;
+}
+
+.navegador {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    text-transform: uppercase;
+}
+
+.items-nav{
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ff001e80;
+    transition: all 0.85s;
+    padding: 5px;
+}
+
+.items-nav:hover {
+    color: #dc0000;
+    cursor: pointer;
+    background-color: #320005cc;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 /*INFINITE ANIMATION*/
@@ -152,55 +150,22 @@ a {
     animation-delay: calc(30s / 5 * (5 - 5) * -1);
 }
 
+
 /*VIDEO SECTION*/
 
-.video-container {
-    display: block;
-    position: relative;
-    width: 100%;
-    max-height: 250vh;
-    margin-top: 80px;
-    margin-bottom: 100px;
-    margin-top: 40%;
-
+.videos{
+    animation: pop-pop ease-in;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
 }
 
-.video {
-    position: relative;
-    /* The following line makes the video responsive */
-    max-width: 100%;
-    padding: 20px;
-    margin-bottom: 10px;
+.video-anim {
+    opacity: 0;
+    scale: .5;
+    transition: opacity 0.5s, scale 0.5s;
 }
-
-
-/*FOOTER*/
-
-.footer {
-    background-color:rgba(255, 0, 38, 0.2);
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-    position: static;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    
-}
-
-.shareContact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
-    margin-bottom: 20px;
-}
-
-
-.icons {
-    display: flex;
-    margin: 10px;
+.video-anim.visible {
+    animation: pop-pop 0.7s ease-in forwards;
 }
 
 /*MONTH VIEWERS*/
@@ -213,7 +178,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 0, 30, .5);
+    background-color: #ff001e80;
     animation: pop-pop ease-in;
     animation-timeline: view();
     animation-range: entry 0% cover 20%;
@@ -245,58 +210,84 @@ a {
     
 }
 
-/*ASIDE*/
+/*Popular Songs Section*/
+.popular-songs {
+    width: 100vw;
+    height: 30vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
 
-.aside-article {
+.section-container{
+    width: 90vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 300px;
-    height: 400px;
-    margin-bottom: 50px;
-    margin-right: 20px;
-    margin-left: auto;
-    background-color: rgba(255, 0, 30, 0.5);
-    color: #ffffff;
+    background-color: #ff001e80;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
 }
 
-.aside-article h2 {
-    font-size: 2.2em;
-    position: relative;
+.section-title {
+    font-size: 2em;
+    text-align:center ;
 }
 
-aside {
-    width: 100%;
-}
-
-.secundary-navegator p {
+.secundary-navegator {
+    width: 12vw;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 25px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: all 0.5s;
-}
-.secundary-navegator b {
-    margin-right: 10px;
+    flex-wrap: nowrap;
+    flex-direction: column;
 }
 
-.secundary-navegator p:hover {
-    color: rgb(220, 0, 0);  
-    cursor: pointer;
-    transform: scale(1.1);
-    background-color: rgba(50, 0, 5, .8);
+.secundary-navegator img{
+    width: 5vw;
+    height: 10vh;
 }
 
-.secundary-navegator img {
-    width: 80px;
+
+
+/*FOOTER*/
+
+.footer-section {
+    background-color: #ff001e80;
+    color: #ffffff;
+    width: 100vw;
+    min-width: 320px;
     height: 80px;
-    object-fit:scale-down;
-    margin-right: auto;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centra el contenido principal */
+    align-items: center;
+    padding: 0 40px; /* Espacio a los lados */
+    box-sizing: border-box;
 }
 
+#Copy {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: stroke;
+    text-align: center;
+    width: max-content;
+}
+
+.shareContact {
+    position: absolute;
+    right: 40px; /* Espacio desde el borde derecho */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+.icons {
+    filter: drop-shadow(0 4px 20px rgba(255, 255, 255, 0.2));
+    transition: transform 0.3s;
+}
+
+.icons:hover {
+    transform: scale(1.2);
+}
