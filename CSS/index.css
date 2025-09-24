@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/*HEADER*/
+
+.Logo {
+    position: absolute;
+}
+
+.Logo img {
+    width: 50px;
+    margin-left: 10px;
+}
+
+.main-title {
+    display: flex;
+    flex-direction: column; /* Coloca el título y subtítulo en columna */
+    align-items: center;    /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    font-size: 1.5em;
+    width: 100vw; /* Ocupa todo el ancho de la pantalla */
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+
+.main-title  a {
+    color: rgb(255, 0, 0);
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    font-size: 1.2rem;
+    margin-top: 12px;
+}
+
+.items-nav {
+    width: 110px;
+    text-align: center;
+    justify-items: center;
+    line-height: 30px;
+    margin-bottom: 80px;
+}
+
+
+.nav1 a {
+    color: rgb(255, 0, 0);
+    position: relative;
+    letter-spacing: 0.5px;
+    padding: 0 5px;
+    
+}
+
+.nav1 a:after {
+    content: "";
+    position: absolute;
+    background-color: rgb(255, 0, 0);
+    height: 3px;
+    width: 0;
+    right: 5px;
+    bottom: -10px;
+    transition: all 0.3s;
+}
+
+.nav1 a:hover {
+    color: rgb(220, 0, 0);
+}
+
+.nav1 a:hover:after {
+    width: 3.2rem;
+}
+
+/*INFINITE ANIMATION*/
+
+.wrapper {
+    width: 90%;
+    max-width: 1536px;
+    margin-inline: auto;
+    position: relative;
+    height: 200px;
+    margin-top: 8rem;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1) 20%,
+        rgba(0, 0, 0, 1) 80%,
+        rgba(0, 0, 0, 0) 100%
+    );
+}
+
+.animation-box img {
+    object-fit: scale-down;
+    width: 200px;
+    height: 200px;
+}
+
+@keyframes scrollInfinite {
+    to{
+        left: -200px;
+    }
+    
+}
+
+.animation-box {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 6px;
+    left: max(calc(200px * 5), 100%);
+    animation-name: scrollInfinite;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.item1 {
+    animation-delay: calc(30s / 5 * (5 - 1) * -1);
+}
+
+.item2 {    
+    animation-delay: calc(30s / 5 * (5 - 2) * -1);
+}
+
+.item3 {
+    animation-delay: calc(30s / 5 * (5 - 3) * -1);
+}
+
+.item4 {
+    animation-delay: calc(30s / 5 * (5 - 4) * -1);
+}
+
+.item5 {
+    animation-delay: calc(30s / 5 * (5 - 5) * -1);
+}
+
+/*VIDEO SECTION*/
+
+.video-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-height: 250vh;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    margin-top: 40%;
+
+}
+
+.video {
+    position: relative;
+    /* The following line makes the video responsive */
+    max-width: 100%;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+
+/*FOOTER*/
+
+.footer {
+    background-color:rgba(255, 0, 38, 0.2);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    position: static;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.shareContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+
+.icons {
+    display: flex;
+    margin: 10px;
+}
+
+/*MONTH VIEWERS*/
+
+.month-views {
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    margin-bottom: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 0, 30, .5);
+    animation: pop-pop ease-in;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+    mask-image: linear-gradient(
+        to left,
+        rgba(10, 0, 0, 0),
+        rgba(10, 0, 0, 1) 20%,
+        rgba(10, 0, 0, 1) 80%,
+        rgba(10, 0, 0, 0) 100%
+    );
+}
+
+.viewers {
+    font-size: 2em;
+    text-align: center;
+}
+
+/*MONTH ANIMATION*/
+
+@keyframes pop-pop {
+    from {
+       opacity: 0;
+       scale: .5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+    
+}
+
+/*ASIDE*/
+
+.aside-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin-bottom: 50px;
+    margin-right: 20px;
+    margin-left: auto;
+    background-color: rgba(255, 0, 30, 0.5);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.aside-article h2 {
+    font-size: 2.2em;
+    position: relative;
+}
+
+aside {
+    width: 100%;
+}
+
+.secundary-navegator p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+.secundary-navegator b {
+    margin-right: 10px;
+}
+
+.secundary-navegator p:hover {
+    color: rgb(220, 0, 0);  
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: rgba(50, 0, 5, .8);
+}
+
+.secundary-navegator img {
+    width: 80px;
+    height: 80px;
+    object-fit:scale-down;
+    margin-right: auto;
+}
+
