@@ -1,0 +1,42 @@
+/*FOOTER*/
+
+.footer-section {
+    background-color: #ff001e80;
+    color: #ffffff;
+    width: 100vw;
+    min-width: 320px;
+    height: 80px;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centra el contenido principal */
+    align-items: center;
+    padding: 0 40px; /* Espacio a los lados */
+    box-sizing: border-box;
+}
+
+#Copy {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: stroke;
+    text-align: center;
+    width: max-content;
+}
+
+.shareContact {
+    position: absolute;
+    right: 40px; /* Espacio desde el borde derecho */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+.icons {
+    filter: drop-shadow(0 4px 20px rgba(255, 255, 255, 0.2));
+    transition: transform 0.3s;
+}
+
+.icons:hover {
+    transform: scale(1.2);
+}
