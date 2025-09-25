@@ -26,9 +26,9 @@
     align-items: center;
     justify-content: center;
     background-color: #ff001e80;
-    animation: pop-pop ease-in;
+    animation: pop-pop ease-in-out;
     animation-timeline: view();
-    animation-range: entry 0% cover 20%;
+    animation-range: entry 0% cover 60%;
     mask-image: linear-gradient(
         to left,
         rgba(10, 0, 0, 0),
@@ -43,20 +43,6 @@
     text-align: center;
 }
 
-/*MONTH ANIMATION*/
-
-@keyframes pop-pop {
-    from {
-       opacity: 0;
-       scale: .5;
-    }
-    to {
-        opacity: 1;
-        scale: 1;
-    }
-    
-}
-
 /*Popular Songs Section*/
 .popular-songs {
     width: 100vw;
@@ -65,6 +51,9 @@
     display: flex;
     justify-content: center;
     margin-bottom: 100px;
+    animation: pop-pop ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
 }
 
 .section-title {
@@ -89,7 +78,7 @@
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 10px;
+    gap: 30px;
 }
 
 /*Songs Picker*/
@@ -102,13 +91,27 @@
     display: flex;
     align-items: center;
     border-top: 1px solid #535353;
-    cursor: pointer;
 }
 
-.songs img {
+.song-links {
+    transition: transform .85s, background-color 1s;
+    border-radius: 10px;
+}
+
+.song-links:hover {
+    transform: scale(1.1);
+    background-color: rgba(69, 5, 12, 0.819);
+    border-radius: 10px;
+}
+
+.song-img {
+    height: 80px;
     height: 80px;
     margin-right: 20px;
+    border-radius: 10px;
+
 }
+
 
 .song-title {
     width: 40%;
@@ -117,4 +120,19 @@
 .description {
     font-size: 0.85rem;
     font-weight: 300;
+}
+
+/*Pop-pop Animation*/
+
+
+@keyframes pop-pop {
+    from {
+       opacity: 0;
+       scale: .5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+    
 }

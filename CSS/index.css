@@ -47,20 +47,19 @@ a {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    pointer-events: none;
+    cursor: pointer;
 }
 
 .title h1 a {
     font-size: 1.5em;
     color: #ff001e80;
     text-shadow: 0 0 5px #ff001e80, 0 0 10px #ff001e80, 0 0 20px #ff001e80;
-    transition: all 0.85s;
+    transition: all .5s;
 }
 
 .title :hover{
     color: #dc0000;
     text-shadow: 0 0 10px #dc0000, 0 0 20px #dc0000, 0 0 30px #dc0000;
-    cursor: pointer;
 }
 
 .navegador {
@@ -74,26 +73,26 @@ a {
     font-size: 1.1em;
     font-weight: bold;
     color: #ff001e80;
+    text-shadow: 0 0 5px #ff001e80, 0 0 10px #ff001e80, 0 0 20px #ff001e80;
     transition: all 0.85s;
     padding: 5px;
 }
 
 .items-nav:hover {
     color: #dc0000;
+    text-shadow: 0 0 10px #dc0000, 0 0 20px #dc0000, 0 0 30px #dc0000;
     cursor: pointer;
-    background-color: #320005cc;
-    padding: 5px;
-    border-radius: 5px;
 }
 
 /*INFINITE ANIMATION*/
 
 .wrapper {
+    display: flex;
     width: 90%;
     max-width: 1536px;
     margin-inline: auto;
     position: relative;
-    height: 200px;
+    height: 300px;
     margin-top: 8rem;
     overflow: hidden;
     mask-image: linear-gradient(
@@ -105,50 +104,63 @@ a {
     );
 }
 
-.animation-box img {
-    object-fit: scale-down;
-    width: 200px;
-    height: 200px;
-}
-
 @keyframes scrollInfinite {
     to{
         left: -200px;
-    }
-    
+    }   
 }
+
+.item1 {
+    animation-delay: calc(30s / 7 * (7 - 1) * -1);
+}
+
+.item2 {    
+    animation-delay: calc(30s / 7 * (7 - 2) * -1);
+}
+
+.item3 {
+    animation-delay: calc(30s / 7 * (7 - 3) * -1);
+}
+
+.item4 {
+    animation-delay: calc(30s / 7 * (7 - 4) * -1);
+}
+
+.item5 {
+    animation-delay: calc(30s / 7 * (7 - 5) * -1);
+}
+
+.item6 {
+    animation-delay: calc(30s / 7 * (7 - 6) * -1);
+}
+
+.item7 {
+    animation-delay: calc(30s / 7 * (7 - 7) * -1);
+}
+
 
 .animation-box {
     width: 200px;
     height: 200px;
     position: absolute;
-    border-radius: 6px;
-    left: max(calc(200px * 5), 100%);
+    left: max(calc(200px * 7), 100%);
     animation-name: scrollInfinite;
     animation-duration: 30s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
-.item1 {
-    animation-delay: calc(30s / 5 * (5 - 1) * -1);
+.animation-box img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    transition: opacity 0.4s, transform 0.4s;
 }
 
-.item2 {    
-    animation-delay: calc(30s / 5 * (5 - 2) * -1);
+.animation-box:hover {
+    z-index: 10;
 }
-
-.item3 {
-    animation-delay: calc(30s / 5 * (5 - 3) * -1);
+.animation-box:hover img {
+    opacity: 0.6;
 }
-
-.item4 {
-    animation-delay: calc(30s / 5 * (5 - 4) * -1);
-}
-
-.item5 {
-    animation-delay: calc(30s / 5 * (5 - 5) * -1);
-}
-
-
-
