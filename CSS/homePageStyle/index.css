@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
 }
 
 body {
@@ -24,7 +25,7 @@ a {
     align-items: center;
     padding: 20px;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -52,6 +53,7 @@ a {
     color: #ff001e80;
     text-shadow: 0 0 5px #ff001e80, 0 0 10px #ff001e80, 0 0 20px #ff001e80;
     transition: all .5s;
+    white-space: nowrap; /* prevent line breaks in title */
 }
 
 .title :hover{
@@ -64,6 +66,14 @@ a {
     align-items: center;
     gap: 50px;
     text-transform: uppercase;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.navegador-responsive {
+    display: none ;
 }
 
 .items-nav{
@@ -160,4 +170,80 @@ a {
 }
 .animation-box:hover img {
     opacity: 0.6;
+}
+
+/*Break Point*/
+
+
+/*LAPTOP RESPONSIVE*/
+
+@media screen and (max-width: 1460px){
+    /* Keep title on a single line and centered */
+    .title h1 a{
+        white-space: nowrap;
+    }
+
+    .navegador {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        z-index: 1001;
+
+    }
+
+}
+
+/*Title Change*/
+
+@media screen and (max-width: 720px) {
+    .title{
+        /* Constrain title footprint while keeping it centered */
+        max-width: 60vw;
+    }
+    .title h1 a{
+        white-space: nowrap;
+        font-size: 1.2em;
+    }
+    
+}
+
+/* Extra small adjustments for wrapper sizing */
+@media screen and (max-width: 500px) {
+    .wrapper {
+        height: 220px;
+        margin-top: 7rem;
+    }
+    .animation-box,
+    .animation-box img {
+        width: 150px;
+        height: 150px;
+    }
+    /* Start position adjusted for smaller tiles */
+    .animation-box {
+        left: max(calc(150px * 7), 100%);
+    }
+}
+
+/* Header compact layout under 430px */
+@media screen and (max-width: 430px) {
+    .title {
+        max-width: 55vw;
+    }
+    .title h1 a {
+        font-size: 1em;
+    }
+    .menu-icon {
+        right: 8px;
+    }
+    .menu-svg {
+        width: 26px;
+        height: 26px;
+    }
 }
