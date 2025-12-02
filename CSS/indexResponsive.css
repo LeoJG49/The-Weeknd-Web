@@ -1,0 +1,210 @@
+
+@media screen and (max-width: 1460px){
+    /* Keep title on a single line and centered */
+    .title h1 a{
+        white-space: nowrap;
+    }
+
+    .navegador {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        z-index: 1001;
+
+    }
+
+}
+
+/*Title Change*/
+
+@media screen and (max-width: 720px) {
+    .title{
+        /* Constrain title footprint while keeping it centered */
+        max-width: 60vw;
+    }
+    .title h1 a{
+        white-space: nowrap;
+        font-size: 1.2em;
+    }
+    
+}
+
+/* Extra small adjustments for wrapper sizing */
+@media screen and (max-width: 500px) {
+    .wrapper {
+        height: 220px;
+        margin-top: 7rem;
+    }
+    .animation-box,
+    .animation-box img {
+        width: 150px;
+        height: 150px;
+    }
+    /* Start position adjusted for smaller tiles */
+    .animation-box {
+        left: max(calc(150px * 7), 100%);
+    }
+}
+
+/* Header compact layout under 430px */
+@media screen and (max-width: 430px) {
+    .title {
+        max-width: 55vw;
+    }
+    .title h1 a {
+        font-size: 1em;
+    }
+    .menu-icon {
+        right: 8px;
+    }
+    .menu-svg {
+        width: 26px;
+        height: 26px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .section-container {
+        width: 94vw;
+        padding: 16px;
+    }
+    .section-title {
+        font-size: 1.6em;
+    }
+    .songs {
+        width: 42vw;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .section-container {
+        width: 96vw;
+        padding: 14px;
+    }
+    .secundary-navegator {
+        gap: 16px;
+        margin-top: 32px;
+    }
+    .songs {
+        width: 90vw;
+        height: 90px;
+    }
+    .song-img {
+        width: 64px;
+        height: 64px;
+        margin-right: 14px;
+    }
+    .song-title {
+        width: auto;
+        font-size: 1rem;
+    }
+    .description {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .month-views {
+        height: auto;
+        padding: 16px 0;
+        margin-bottom: 64px;
+    }
+    .viewers {
+        font-size: 1.4em;
+    }
+    .section-title {
+        font-size: 1.4em;
+    }
+    .songs {
+        width: 94vw;
+        height: 84px;
+        padding: 8px;
+    }
+    .song-img {
+        width: 56px;
+        height: 56px;
+        margin-right: 12px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .viewers { font-size: 1.2em; }
+    .section-title { font-size: 1.2em; }
+    .songs {
+        height: 78px;
+    }
+    .song-title { font-size: 0.95rem; }
+    .description { font-size: 0.75rem; }
+}
+
+.section-title {
+    font-size: 2em;
+    text-align:center ;
+}
+
+.section-container{
+    width: 90vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #ff001e80;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+.secundary-navegator{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+}
+
+/*Songs Picker*/
+
+.songs {
+    position: relative;
+    width: 25vw;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #535353;
+}
+
+.song-links {
+    transition: transform .85s, background-color 1s;
+    border-radius: 10px;
+}
+
+.song-links:hover {
+    transform: scale(1.1);
+    background-color: rgba(69, 5, 12, 0.819);
+    border-radius: 10px;
+}
+
+.song-img {
+    height: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 10px;
+
+}
+
+
+.song-title {
+    width: 40%;
+}
+
+.description {
+    font-size: 0.85rem;
+    font-weight: 300;
+}
