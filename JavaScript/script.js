@@ -2,8 +2,8 @@
 import './generalAnimationsGSAP.js'
 import './horizontalScrollTitleGSAP.js'
 import './aboutTextAnimationGSAP.js'
-
-
+import './maskTextAnimationGSAP.js'
+import './timelineAnimationGSAP.js'
 
 
 
