@@ -40,7 +40,6 @@ body {
 a, li {
     text-decoration: none;
     list-style: none;
-    color: #ffffff;
 }
 
 /*Header Section*/
@@ -53,12 +52,10 @@ header {
     justify-content: space-between;
     padding: 0 20px;
     position: fixed;
-    z-index: 100;
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border: 1px solid #ffffff;
-    margin-top: 10px;
+    z-index: 1000;
     font-family: var(--cursive-font-family);
+    background-color: var(--secondary-bg-color);
+    color: var(--secundary-text-color);
 }
 
 .title-container {
@@ -68,24 +65,6 @@ header {
 
 .title span {
     display: inline-block;
-}
-
-.title::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 0.15rem;
-    background-color: #fff;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 300ms ease-out;
-}
-
-.title:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
 }
 
 /*Nav Section*/
@@ -110,6 +89,7 @@ header {
     width: auto;
     padding: 5px 10px;
     position: relative;
+    color: var(--secundary-text-color);
 }
 
 .nav-items span {
@@ -123,7 +103,7 @@ header {
     bottom: 0;
     width: 100%;
     height: 0.05rem;
-    background-color: #fff;
+    background-color: #1b1b1b;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 300ms ease-out;
@@ -199,6 +179,7 @@ header {
     align-items: center;
     justify-content: center;
     will-change: transform;
+    position: relative;
 }
 
 .about-title {
@@ -206,6 +187,7 @@ header {
     font-size: var(--ultra-large-font-size);
     color: var(--primary-text-color);
     font-family: var(--bold-font-family);
+    position: relative;
 }
 
 /*About Section Info*/
@@ -216,6 +198,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .info {
@@ -223,6 +206,112 @@ header {
     font-size: 2.2rem;
     font-weight: 900;
     font-family: var(--bold-font-family);
+    position: relative;
+}
+
+/*Timeline Section*/
+.timeline-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; 
+    padding: 0 0 20px 0;
+}
+
+.title-mask {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-bg-color);
+    inset: 0;
+    pointer-events: none;
+}
+
+.timeline-title {
+    font-size: 6rem;
+    font-family: var(--bold-font-family);
+    display: flex;
+    align-items: center;
+    pointer-events: auto;
+    /* Importante: para optimizar la animación de escala */
+    will-change: transform, opacity; 
+    /* Fuerzas el renderizado de alta calidad para las tipografías */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.timeline-title span {
+    display: inline-block;
+}
+
+.timeline {
+    width: 90%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkpoint {
+    width: 40%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.checkpoint div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;    
+    border: 2px solid var(--secondary-bg-color);
+    border-radius: 20px;
+    padding: 1.5rem;
+}
+
+.checkpoint div img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.checkpoint div p {
+    font-size: var(--medium-font-size);
+    font-family: var(--regular-font-family);
+    line-height: 22px;
+}
+
+.checkpoint:nth-child(odd) {
+    border-left: 5px solid var(--secondary-bg-color);
+    padding-left: 3rem;
+    transform: translate(50%);
+}
+
+.checkpoint:nth-child(even) {
+    border-right: 5px solid var(--secondary-bg-color);
+    padding-right: 3rem;
+    transform: translate(-49.5%);
+}
+
+/*Tour Section*/
+
+.tour-container {
+    width: 100%;
+    height: 100vh;
 }
 
 /*Footer Section*/
@@ -239,6 +328,7 @@ header {
     margin-left: 20px;
     font-size: var(--large-font-size);
     font-family: var(--cursive-font-family);
+    position: relative;
 }
 
 .footer-title span {
