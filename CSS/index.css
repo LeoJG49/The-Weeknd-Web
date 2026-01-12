@@ -19,7 +19,7 @@
     --cursive-font-family: 'Permanent Marker', cursive;
     --regular-font-family: 'Dekko', sans-serif;
     --primary-bg-color: #161616;
-    --secondary-bg-color: #d1d1d1;
+    --secondary-bg-color: #2e2e2e;
     --ultra-large-font-size: 40rem;
     --large-font-size: 1.8rem;
     --medium-font-size: 1.2rem;
@@ -28,6 +28,9 @@
     --secundary-text-color: #1b1b1b;
 }
 
+html {
+    overflow-x: hidden;
+}
 
 body {
     width: 100%;
@@ -46,7 +49,7 @@ a, li {
 
 header {
     width: 100%;
-    height: 100px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -55,7 +58,7 @@ header {
     z-index: 1000;
     font-family: var(--cursive-font-family);
     background-color: var(--secondary-bg-color);
-    color: var(--secundary-text-color);
+    color: var(--primary-text-color);
 }
 
 .title-container {
@@ -89,7 +92,7 @@ header {
     width: auto;
     padding: 5px 10px;
     position: relative;
-    color: var(--secundary-text-color);
+    color: var(--primary-text-color);
 }
 
 .nav-items span {
@@ -103,7 +106,7 @@ header {
     bottom: 0;
     width: 100%;
     height: 0.05rem;
-    background-color: #1b1b1b;
+    background-color: #c7c7c7;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 300ms ease-out;
@@ -257,11 +260,13 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
+    position: relative;
 }
 
 .checkpoint {
-    width: 40%;
-    height: 250px;
+    width: 50%;
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -289,29 +294,98 @@ header {
     margin-bottom: 1rem;
 }
 
-.checkpoint div p {
+.timeline-description{
     font-size: var(--medium-font-size);
     font-family: var(--regular-font-family);
-    line-height: 22px;
+}
+
+.timeline-description span {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--primary-text-color) 0%, var(--primary-text-color) 100%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .checkpoint:nth-child(odd) {
-    border-left: 5px solid var(--secondary-bg-color);
-    padding-left: 3rem;
+    padding-left: 3em;
     transform: translate(50%);
 }
 
 .checkpoint:nth-child(even) {
-    border-right: 5px solid var(--secondary-bg-color);
-    padding-right: 3rem;
-    transform: translate(-49.5%);
+    padding-right: 3em;
+    transform: translate(-50%);
 }
 
 /*Tour Section*/
-
-.tour-container {
+.tour-section {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0 0 0;
+}
+
+.tour-title {
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 5rem;
+    font-family: var(--bold-font-family);
+}
+
+.tour-box {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tour-items {
+    width: 33%;
+    height: 200px;
+    font-family: var(--regular-font-family);
+}
+
+.tour-items a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--primary-text-color);
+}
+
+.date {
+    width: 40%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #2b2b2a;
+    margin-left: 40px;
+}
+
+.date-title {
+    font-size: var(--large-font-size);
+}
+
+.tour-info {
+    width: 40%;
+    margin-right: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
 }
 
 /*Footer Section*/
@@ -378,8 +452,6 @@ header {
       transform: scale(1.2);
     }
 }
-
-
 
 
 
