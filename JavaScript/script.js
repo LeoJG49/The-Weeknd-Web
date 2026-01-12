@@ -4,6 +4,7 @@ import './horizontalScrollTitleGSAP.js'
 import './aboutTextAnimationGSAP.js'
 import './maskTextAnimationGSAP.js'
 import './timelineAnimationGSAP.js'
+import './timelineTextAnimationGSAP.js'
 
 
 
