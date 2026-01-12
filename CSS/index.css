@@ -394,7 +394,7 @@ header {
     height: 30vh;
     position: sticky;
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: space-between;
 }
 
@@ -431,8 +431,7 @@ header {
     font-family: var(--cursive-font-family);
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
 }
 
 .social-media {
