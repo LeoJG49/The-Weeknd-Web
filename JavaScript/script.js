@@ -2,10 +2,10 @@
 import './generalAnimationsGSAP.js'
 import './horizontalScrollTitleGSAP.js'
 import './aboutTextAnimationGSAP.js'
-import './maskTextAnimationGSAP.js'
+import './timelineTitleAnimationGSAP.js'
 import './timelineAnimationGSAP.js'
 import './timelineTextAnimationGSAP.js'
-
+import './tourTitleAnimationGSAP.js'
 
 
 
@@ -15,14 +15,17 @@ import './timelineTextAnimationGSAP.js'
 
 
 //Smooth Scroll
+let lenis;
 
-const lenis = new Lenis()
+if (window.matchMedia('(min-width: 1200px)').matches) {
+  lenis = new Lenis({
+    smoothWheel: true,
+    smoothTouch: false
+  });
 
-lenis.on('scroll', () => {})
-
-function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
 }
-
-requestAnimationFrame(raf)
