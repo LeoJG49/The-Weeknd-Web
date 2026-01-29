@@ -1,8 +1,8 @@
 gsap.registerPlugin(ScrollTrigger);
 
 let horizontal = gsap.to(".about-wrapper", {
-    x: "-500vw",
-    ease: "power2.out",
+    x: "-480vw",
+    ease: "none",
     paused: true
 });
 
