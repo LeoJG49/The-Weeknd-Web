@@ -74,6 +74,7 @@ header {
 /*Nav Section*/
 .nav-container {
     width: auto;
+    background-color: yellow;
     height: 100%;
     display: flex;
     align-items: center;
@@ -120,12 +121,14 @@ header {
 }
 
 /*Hero Section*/
-
 .hero {
-    width: 80%;
+    max-width: 80%;
     height: 100vh;
+    padding: 20px 0;
     display: flex;
     align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
     position: relative;
     margin: 0 auto;
@@ -151,8 +154,9 @@ header {
     display: flex;
     flex-wrap: nowrap;
     position: relative;
-    gap: 100px;
+    gap: 120px;
     padding: 20px;
+    will-change: transform;
     animation: carousel 25s linear infinite;
 }
 
@@ -176,8 +180,8 @@ header {
     border-radius: 10px;
 }
 
-/*About Wrapper Section*/
 
+/*About Wrapper Section*/
 .about-wrapper {
     width: 500vw;
     height: 100vh;
@@ -196,11 +200,14 @@ header {
     position: relative;
 }
 
-/*About Section Info*/
+.about-title span {
+    display: inline-block;
+}
 
+/*About Section Info*/
 .about-info {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -493,7 +500,6 @@ header {
 }
 
 /*Footer Original Contenct*/
-
 .footer-title-container  {
     width: 35%;
     position: relative;
