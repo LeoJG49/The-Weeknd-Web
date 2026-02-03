@@ -1,0 +1,323 @@
+/*
+Mobile Devices 319px - 480px
+Ipads and Tablets 481px - 1200px
+Laptops 1201px - 1600px
+Desktops 1601px and more
+*/
+
+:root {
+    --bold-font-family: "Notable", sans-serif;
+    --cursive-font-family: 'Permanent Marker', cursive;
+    --regular-font-family: 'Dekko', sans-serif;
+    --primary-bg-color: #6e0202;
+    --secondary-bg-color: #0e0d0d;
+    --ultra-large-font-size: 40rem;
+    --large-font-size: 2rem;
+    --medium-font-size: 1.2rem;
+    --small-font-size: .85rem;
+    --primary-text-color: #c7c7c7;
+    --secundary-text-color: #0e0d0d;
+}
+
+/*Mobile*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    /*Header*/
+    header {
+        position: relative;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+    
+    .nav-container {
+        display: none;
+    }
+
+    /*Carousel Section*/
+    .hero {
+        height: 40dvh;
+    }
+
+    .scroll-track {
+        gap: 60px;
+    }
+
+    .album-carousel img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /*About Section*/
+    .about-wrapper {
+        width: 100%;
+        height: 19dvh;
+        align-items: start;
+        margin-bottom: 40px;
+    }
+
+    .about-title {
+        font-size: var(--large-font-size);
+    }
+
+    .info {
+        font-size: var(--small-font-size);
+        text-align: center;
+    }
+
+    /*Discography Timeline Section*/
+    .title-mask {
+        height: 30dvh;
+    }
+
+    .timeline-title {
+        font-size: var(--large-font-size);
+        text-align: center;
+    }
+
+    .timeline {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .checkpoint {
+        width: 90%;
+        padding: 0 !important;
+        transform: translate(0%) !important;
+    }
+
+    .checkpoint div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 1.5rem;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .checkpoint div img {
+        width: 100%;
+        width: 200px;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .timeline-description {
+        font-size: var(--small-font-size);
+    }
+    
+    .checkpoint:nth-child(odd) {
+        padding: 0 !important;
+        transform: translate(0%) !important;
+    }
+
+    .checkpoint:nth-child(even) {
+        padding: 0 !important;
+        transform: translate(0%) !important;
+    }
+
+    /*Tour Section*/
+    .tour-section {
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .tour-title {
+        height: 30dvh;
+    }
+
+    .on-tour {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .tour-box {
+        width: 100%;
+        align-items: flex-start;
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .tour-items {
+        width: 100%;
+        height: 150px;
+        border-top: 1px solid #0e0d0d;
+        border-radius: 0;
+        transition: none;
+    }
+
+    .tour-items:hover {
+        border-color: none;
+        transform: none;
+    }
+
+    .date {
+        width: 40%;
+        height: 65%;
+        border-radius: 10px;
+        margin-left: 10px;
+    }
+
+    .date-title {
+        font-size: var(--medium-font-size);
+    }
+
+    .tour-info {
+        width: 50%;
+        margin-right: 10px;
+    }
+
+    .location {
+        font-size: var(--small-font-size);
+    }
+
+    /*Footer Section*/
+    .footer-content-sticky {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .contact-container {
+        width: 100%;
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .footer-title-container {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 20px;
+    }
+
+    .footer-title {
+        font-size: var(--medium-font-size);
+    }
+
+    .social-media {
+        width: 100%;
+        justify-content: start;
+        gap: 30px;
+        margin: 0;
+        padding-left: 20px;
+
+        a {
+            transition: none;
+        }
+    }
+
+    .copyright {
+        font-size: var(--small-font-size);
+        text-align: center;
+    }
+
+}
+
+/*Tablets*/
+
+@media (min-width: 481px) and (max-width: 1200px) {
+    /*Header*/
+    .title {
+        font-size: 2.5rem;
+    }
+
+    /*Carousel Section*/
+    .hero {
+        height: 50dvh;
+    }
+
+    .scroll-track {
+        gap: 80px;
+    }
+
+    .album-carousel img {
+        width: 200px;
+        height: 200px;
+    }
+
+    /*About Section*/
+    .about-wrapper {
+        width: 100%;
+        height: auto;
+        align-items: start;
+        margin-bottom: 40px;
+    }
+
+    .about-title {
+        font-size: 3rem;
+    }
+
+    .info {
+        font-size: var(--medium-font-size);
+        text-align: center;
+    }
+
+    /*Discography Timeline Section*/
+    .title-mask {
+        height: 40dvh;
+    }
+
+    .timeline-title {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .timeline {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .checkpoint {
+        width: 85%;
+        padding: 0 !important;
+        transform: translate(0%) !important;
+    }
+
+    .checkpoint div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        gap: 0;
+        padding: 1.5rem;
+    }
+
+    .checkpoint div img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .timeline-description {
+        font-size: var(--medium-font-size);
+    }
+    
+    .checkpoint:nth-child(odd) {
+        padding: 0 !important;
+        transform: translate(0%) !important;
+    }
+
+    .checkpoint:nth-child(even) {
+        padding: 0 !important;
+        transform: translate(0%) !important;
+    }
+
+    /*Tour Section*/
+    .tour-items {
+        width: 48%;
+    }
+}
