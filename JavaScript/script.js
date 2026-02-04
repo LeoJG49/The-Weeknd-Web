@@ -1,6 +1,6 @@
 
 import './generalAnimationsGSAP.js'
-// import './horizontalScrollTitleGSAP.js'
+import './horizontalScrollTitleGSAP.js'
 import './aboutTextAnimationGSAP.js'
 import './timelineTitleAnimationGSAP.js'
 import './timelineAnimationGSAP.js'
