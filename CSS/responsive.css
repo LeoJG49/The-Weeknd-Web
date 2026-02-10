@@ -24,6 +24,7 @@ Desktops 1601px and more
 @media (min-width: 320px) and (max-width: 480px) {
     /*Header*/
     header {
+        height: 65px;
         position: relative;
     }
 
@@ -42,6 +43,7 @@ Desktops 1601px and more
 
     .scroll-track {
         gap: 60px;
+        animation: carousel 35s linear infinite;
     }
 
     .album-carousel img {
@@ -454,6 +456,26 @@ Desktops 1601px and more
         text-align: center;
     }
 
+    /*Timeline Title*/
+
+    .title-mask {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .timeline-title {
+        width: 100%;
+    }
+
+    .checkpoint {
+        width: 85%;
+        padding: 0 !important;
+        transform: translate(0%) !important;
+        margin-bottom: 20px;
+    }
     
 
     /*Tour Section*/
